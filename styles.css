@@ -1,0 +1,103 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative; /* Ini penting untuk positioning absolut */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #333333;
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    color: #555555;
+    font-size: 18px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 24px);
+    margin-bottom: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+}
+
+button:disabled {
+    background-color: #888888;
+}
+
+button:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+#output {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333333;
+}
+
+#note {
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgba(128, 128, 128, 0.7);
+}
+
+#copyright {
+    position: absolute; /* Memposisikan logo secara absolut */
+    bottom: 10px; /* Jarak dari bawah */
+    right: 10px; /* Jarak dari kanan */
+    font-size: 14px;
+    color: rgba(128, 128, 128, 0.7);
+    backdrop-filter: blur(5px); /* Efek blur di belakang logo */
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.7); /* Latar belakang semi-transparan untuk visibilitas */
+    border-radius: 5px; /* Sudut melengkung */
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    label, input[type="text"], button, #output, #note, #copyright {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
